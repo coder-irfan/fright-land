@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Frightmare';
+  src: url('/frightmare-font/FrightmareRegular.woff2') format('woff2'),
+       url('frightmare-font/FrightmareRegular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@layer utilities {
+  .hero-bg {
+    background-image: url('/Images/hero-bg.webp');
+  }
+}
+
+.btn-gradient-border {
+    @apply p-[0.125rem] bg-gradient-to-r from-fright-lightGradientViolet to-fright-darkGradientVioled rounded-xl lg:rounded-2xl
+}
+
+.btn-inner {
+    @apply bg-fright-bgColor rounded-xl lg:rounded-2xl px-4 py-2 lg:px-6 lg:py-3 
+}
+
+.footer-link {
+    @apply text-fright-textColor hover:text-fright-lightGradientPink font-bold transition-colors duration-300
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 100%;
+    overflow-x: hidden;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto Slab', sans-serif;
+    overflow-x: hidden;
+    background-color: hsl(252, 64%, 14%);
+}
